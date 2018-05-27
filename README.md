@@ -99,7 +99,8 @@ PARAMETERS
     downloadDirectory: C:\CloudOff
     vCenter: myvcenter.mycompany.com
     vmNetwork: VM Network
-    dataStore: mydatastore```
+    dataStore: mydatastore
+```
 
 ## Future
 
