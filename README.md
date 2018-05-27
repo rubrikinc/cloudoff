@@ -30,7 +30,7 @@ CloudOff will migrate an AWS Instance to vSphere. It only works for VMs that wer
 
 ## Usage Instructions
 
-To use the script run `cloudoff` and provide the appropriate parameters. These include:
+To use the script run `CloudOff.ps1` and provide the appropriate parameters. These include:
 
 ```text
 NAME
@@ -103,13 +103,7 @@ PARAMETERS
 
 ## Future
 
-- Add these functions depending on necessity
-  - Include capability to run one script and act on a whole cluster.
-  - Add ability to encrypt a running bootstrapped cluster.
-  - Support use with CloudFormation
-- Clean up the code
-  - Break out into multiple files to support CloudFormation integration
-  - Standardize methods used in the script
+- Remove dependency on AWS CLI once AWS Tools for Powershell supports creating a vmexport job.
 
 ## Contribution
 
@@ -117,7 +111,7 @@ Create a fork of the project into your own repository. Make all your necessary c
 
 ## Licensing
 
-CC_Encrypt_AWS is freely distributed under the [GPLv3 License](https://www.gnu.org/licenses/gpl-3.0.en.html "LICENSE"). See [LICENSE](https://github.com/rubrik-devops/cc_encrypt_aws/blob/master/LICENSE) for details.
+CC_Encrypt_AWS is freely distributed under the [GPLv3 License](https://www.gnu.org/licenses/gpl-3.0.en.html "LICENSE"). See [LICENSE](https://github.com/rubrik-devops/CloudOff/blob/master/LICENSE) for details.
 
 ## Support
 
