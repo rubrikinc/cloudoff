@@ -1,14 +1,75 @@
-﻿param(
+﻿<#
+
+.SYNOPSIS
+This PowerShell script will migrate an AWS instance to vSphere.
+
+.DESCRIPTION
+This PowerShell will migrate an AWS Instance to vSphere. It only works for VMs that were imported to AWS using vmimport. VMs that were migrated to AWS using Rubrik CloudOn or Cloud Conversion meet this criteria. The basic methodology used by CloudOff to migrate an instance from AWS to vSphere is this:
+
+1. Shutdown the instance in AWS.
+2. Convert the instance to VMDK format and export as an OVA file to an AWS bucket (vmexport) (https://docs.aws.amazon.com/vm-import/latest/userguide/vmexport.html)).
+3. Download exported OVA to local storage.
+4. Deploy OVA on vSphere
+5. Power on exported VM
+
+.EXAMPLE
+PowerCLI C:\CloudOff> .\CloudOff.ps1
+
+cmdlet CloudOff.ps1 at command pipeline position 1
+Supply values for the following parameters:
+instanceId: i-1234567890abcdef
+region: us-west-1
+bucket: cloudoff-bucket
+downloadDirectory: C:\CloudOff
+vCenter: myvcenter.mycompany.com
+vmNetwork: VM Network
+dataStore: mydatastore
+
+.NOTES
+In order for this script to work the Instance must have orginally been a VM that was imported using AWS VM Import.
+
+This script requires:
+
+- Powershell 5.1
+- PowerCLI 6.5 R1
+- AWS CLI
+- AWS Tools for PowerShell
+
+.LINK
+https://github.com/rubrik-devops/CloudOff
+
+#>
+
+param(
+  # The AWS Instance ID of the Instance that is to be exported
   [Parameter(Mandatory=$True)]
   [string]$instanceId,
+
+  # The region that the AWS Instance is running in and where the S3 bucket to use for exports is.
   [Parameter(Mandatory=$True)]
   [string]$region,
+
+  # The name of the S3 bucket to use for exporting the Instance.
   [Parameter(Mandatory=$True)]
   [string]$bucket,
+
+  # The directory on the system where this script is running where an OVA of the Instance will be written.
   [Parameter(Mandatory=$True)]
   [string]$downloadDirectory,
+
+  # The vSphere vCenter that the downloaded OVA for the exported VM will be deployed into.
   [Parameter(Mandatory=$True)]
   [string]$vCenter,
+
+  # The vSphere cluster to deploy the exported VM into.
+  [Parameter(Mandatory=$True)]
+  [string]$cluster,
+
+  # The vSphere DataStore to deploy the exported VM on to.
+  [Parameter(Mandatory=$True)]
+  [string]$dataStore,
+
+  # The vSphere network to attach the exported VM to.
   [Parameter(Mandatory=$True)]
   [string]$vmNetwork
 )
@@ -39,8 +100,8 @@ write-host "$(Get-Date -Format G): Connecting to vCenter $vCenter..."
 
 Connect-VIServer -Server $vCenter
 
-$vmDatastore = Get-DatastoreCluster -Name demo-pure-dsc
-$vmCluster = Get-Cluster -name "Demo"
+$vmDatastore = Get-DatastoreCluster -Name "$dataStore"
+$vmCluster = Get-Cluster -name "$cluster"
 $vmHost = getHost
 $rk_object_name = (Get-EC2Tag -Region $region | where {$_.ResourceId -eq "$instanceId" -and $_.Key -eq "rk_object_name"}).value
 $vmNewName = "$($rk_object_name)-from-AWS" 
