@@ -112,7 +112,7 @@ Create a fork of the project into your own repository. Make all your necessary c
 
 ## Licensing
 
-CC_Encrypt_AWS is freely distributed under the [GPLv3 License](https://www.gnu.org/licenses/gpl-3.0.en.html "LICENSE"). See [LICENSE](https://github.com/rubrik-devops/CloudOff/blob/master/LICENSE) for details.
+CloudOff is freely distributed under the [GPLv3 License](https://www.gnu.org/licenses/gpl-3.0.en.html "LICENSE"). See [LICENSE](https://github.com/rubrik-devops/CloudOff/blob/master/LICENSE) for details.
 
 ## Support
 
