@@ -7,7 +7,7 @@ This PowerShell script will migrate an AWS instance to vSphere.
 This PowerShell will migrate an AWS Instance to vSphere. It only works for VMs that were imported to AWS using vmimport. VMs that were migrated to AWS using Rubrik CloudOn or Cloud Conversion meet this criteria. The basic methodology used by CloudOff to migrate an instance from AWS to vSphere is this:
 
 1. Shutdown the instance in AWS.
-2. Convert the instance to VMDK format and export as an OVA file to an AWS bucket (vmexport) (https://docs.aws.amazon.com/vm-import/latest/userguide/vmexport.html)).
+2. Convert the instance to VMDK format and export as an OVA file to an AWS bucket using vmexport.
 3. Download exported OVA to local storage.
 4. Deploy OVA on vSphere
 5. Power on exported VM
@@ -37,6 +37,7 @@ This script requires:
 
 .LINK
 https://github.com/rubrik-devops/CloudOff
+https://docs.aws.amazon.com/vm-import/latest/userguide/vmexport.html
 
 #>
 
