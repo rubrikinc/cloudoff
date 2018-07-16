@@ -1,0 +1,204 @@
+PowerCLI C:\Scripts\CloudOff> .\CloudOff.ps1 -instanceId i-1234567890 -region us-west-1 -bucket vm-export -downloadDirectory z:\exports -vCenter vcenter -vmNetwork demo_network
+4/27/2018 9:16:38 AM: Preparing for AWS Instance to vSphere VM Migration...
+4/27/2018 9:16:38 AM: Connecting to vCenter vcenter-01...
+
+Name                           Port  User
+----                           ----  ----
+vcenter-01          443   RUBRIK\Demo.User
+4/27/2018 9:16:41 AM: Migrating AWS instance i-1234567890 to vcenter-01 as DEMO-CENTOS7-2-from-AWS
+4/27/2018 9:16:41 AM: Stopping instance i-1234567890 with rk_object_name DEMO-CENTOS7-2...
+
+CurrentState  : Amazon.EC2.Model.InstanceState
+InstanceId    : i-1234567890
+PreviousState : Amazon.EC2.Model.InstanceState
+
+4/27/2018 9:16:41 AM: Instance i-1234567890 power state has: stopped
+4/27/2018 9:16:41 AM: Exporting instance i-1234567890 with rk_object_name DEMO-CENTOS7-2 to bucket vm-export...
+4/27/2018 9:16:44 AM: AWS export task status is: active
+4/27/2018 9:17:14 AM: AWS export task status is: active
+4/27/2018 9:17:44 AM: AWS export task status is: active
+4/27/2018 9:18:15 AM: AWS export task status is: active
+4/27/2018 9:18:45 AM: AWS export task status is: active
+4/27/2018 9:19:15 AM: AWS export task status is: active
+4/27/2018 9:19:45 AM: AWS export task status is: active
+4/27/2018 9:20:15 AM: AWS export task status is: active
+4/27/2018 9:20:46 AM: AWS export task status is: active
+4/27/2018 9:21:16 AM: AWS export task status is: active
+4/27/2018 9:21:46 AM: AWS export task status is: active
+4/27/2018 9:22:16 AM: AWS export task status is: active
+4/27/2018 9:22:46 AM: AWS export task status is: active
+4/27/2018 9:23:16 AM: AWS export task status is: active
+4/27/2018 9:23:46 AM: AWS export task status is: active
+4/27/2018 9:24:16 AM: AWS export task status is: active
+4/27/2018 9:24:46 AM: AWS export task status is: active
+4/27/2018 9:25:17 AM: AWS export task status is: active
+4/27/2018 9:25:47 AM: AWS export task status is: active
+4/27/2018 9:26:17 AM: AWS export task status is: active
+4/27/2018 9:26:47 AM: AWS export task status is: active
+4/27/2018 9:27:17 AM: AWS export task status is: active
+4/27/2018 9:27:47 AM: AWS export task status is: active
+4/27/2018 9:28:17 AM: AWS export task status is: active
+4/27/2018 9:28:47 AM: AWS export task status is: active
+4/27/2018 9:29:18 AM: AWS export task status is: active
+4/27/2018 9:29:48 AM: AWS export task status is: active
+4/27/2018 9:30:18 AM: AWS export task status is: active
+4/27/2018 9:30:48 AM: AWS export task status is: active
+4/27/2018 9:31:18 AM: AWS export task status is: active
+4/27/2018 9:31:49 AM: AWS export task status is: active
+4/27/2018 9:32:19 AM: AWS export task status is: active
+4/27/2018 9:32:49 AM: AWS export task status is: active
+4/27/2018 9:33:22 AM: AWS export task status is: active
+4/27/2018 9:33:52 AM: AWS export task status is: active
+4/27/2018 9:34:22 AM: AWS export task status is: active
+4/27/2018 9:34:53 AM: AWS export task status is: active
+4/27/2018 9:35:23 AM: AWS export task status is: active
+4/27/2018 9:35:53 AM: AWS export task status is: active
+4/27/2018 9:36:23 AM: AWS export task status is: active
+4/27/2018 9:36:53 AM: AWS export task status is: active
+4/27/2018 9:37:23 AM: AWS export task status is: active
+4/27/2018 9:37:54 AM: AWS export task status is: active
+4/27/2018 9:38:24 AM: AWS export task status is: active
+4/27/2018 9:38:54 AM: AWS export task status is: active
+4/27/2018 9:39:24 AM: AWS export task status is: active
+4/27/2018 9:39:54 AM: AWS export task status is: active
+4/27/2018 9:40:25 AM: AWS export task status is: active
+4/27/2018 9:40:55 AM: AWS export task status is: active
+4/27/2018 9:41:25 AM: AWS export task status is: active
+4/27/2018 9:41:55 AM: AWS export task status is: active
+4/27/2018 9:42:25 AM: AWS export task status is: active
+4/27/2018 9:42:55 AM: AWS export task status is: active
+4/27/2018 9:43:26 AM: AWS export task status is: active
+4/27/2018 9:43:56 AM: AWS export task status is: active
+4/27/2018 9:44:26 AM: AWS export task status is: active
+4/27/2018 9:44:56 AM: AWS export task status is: active
+4/27/2018 9:45:26 AM: AWS export task status is: active
+4/27/2018 9:45:56 AM: AWS export task status is: active
+4/27/2018 9:46:26 AM: AWS export task status is: active
+4/27/2018 9:46:56 AM: AWS export task status is: active
+4/27/2018 9:47:27 AM: AWS export task status is: active
+4/27/2018 9:47:57 AM: AWS export task status is: active
+4/27/2018 9:48:27 AM: AWS export task status is: active
+4/27/2018 9:49:00 AM: AWS export task status is: active
+4/27/2018 9:49:30 AM: AWS export task status is: active
+4/27/2018 9:50:00 AM: AWS export task status is: active
+4/27/2018 9:50:30 AM: AWS export task status is: active
+4/27/2018 9:51:01 AM: AWS export task status is: active
+4/27/2018 9:51:31 AM: AWS export task status is: active
+4/27/2018 9:52:01 AM: AWS export task status is: active
+4/27/2018 9:52:31 AM: AWS export task status is: active
+4/27/2018 9:53:01 AM: AWS export task status is: active
+4/27/2018 9:53:31 AM: AWS export task status is: active
+4/27/2018 9:54:02 AM: AWS export task status is: active
+4/27/2018 9:54:32 AM: AWS export task status is: active
+4/27/2018 9:55:02 AM: AWS export task status is: active
+4/27/2018 9:55:32 AM: AWS export task status is: active
+4/27/2018 9:56:02 AM: AWS export task status is: active
+4/27/2018 9:56:32 AM: AWS export task status is: active
+4/27/2018 9:57:02 AM: AWS export task status is: active
+4/27/2018 9:57:33 AM: AWS export task status is: active
+4/27/2018 9:58:03 AM: AWS export task status is: active
+4/27/2018 9:58:33 AM: AWS export task status is: active
+4/27/2018 9:59:03 AM: AWS export task status is: active
+4/27/2018 9:59:33 AM: AWS export task status is: active
+4/27/2018 10:00:03 AM: AWS export task status is: active
+4/27/2018 10:00:33 AM: AWS export task status is: active
+4/27/2018 10:01:03 AM: AWS export task status is: active
+4/27/2018 10:01:34 AM: AWS export task status is: active
+4/27/2018 10:02:04 AM: AWS export task status is: active
+4/27/2018 10:02:34 AM: AWS export task status is: active
+4/27/2018 10:03:04 AM: AWS export task status is: active
+4/27/2018 10:03:35 AM: AWS export task status is: active
+4/27/2018 10:04:05 AM: AWS export task status is: active
+4/27/2018 10:04:35 AM: AWS export task status is: active
+4/27/2018 10:05:05 AM: AWS export task status is: active
+4/27/2018 10:05:35 AM: AWS export task status is: active
+4/27/2018 10:06:05 AM: AWS export task status is: active
+4/27/2018 10:06:35 AM: AWS export task status is: active
+4/27/2018 10:07:06 AM: AWS export task status is: active
+4/27/2018 10:07:36 AM: AWS export task status is: active
+4/27/2018 10:08:06 AM: AWS export task status is: active
+4/27/2018 10:08:36 AM: AWS export task status is: active
+4/27/2018 10:09:06 AM: AWS export task status is: active
+4/27/2018 10:09:36 AM: AWS export task status is: active
+4/27/2018 10:10:06 AM: AWS export task status is: active
+4/27/2018 10:10:36 AM: AWS export task status is: active
+4/27/2018 10:11:07 AM: AWS export task status is: active
+4/27/2018 10:11:38 AM: AWS export task status is: active
+4/27/2018 10:12:08 AM: AWS export task status is: active
+4/27/2018 10:12:38 AM: AWS export task has: completed
+4/27/2018 10:12:38 AM: Downloading exported VM DEMO-CENTOS7-2...
+
+LastWriteTime : 4/27/2018 10:13:32 AM
+Length        : 927719424
+Name          : DEMO-CENTOS7-2.ova
+
+4/27/2018 10:14:00 AM: Updating network in z:\damani\DEMO-CENTOS7-2.ova
+4/27/2018 10:14:00 AM: Uploading z:\exports\DEMO-CENTOS7-2.ova to vCenter vcenter-01 in datacenter  on cluster ...
+
+PowerState              : PoweredOff
+Version                 : v7
+Notes                   :
+Guest                   : DEMO-CENTOS7-2-from-AWS:
+NumCpu                  : 1
+CoresPerSocket          : 1
+MemoryMB                : 2048
+MemoryGB                : 2
+VMHostId                : HostSystem-host-12345
+VMHost                  : esx1
+VApp                    :
+FolderId                : Folder-group-v22
+Folder                  : vm
+ResourcePoolId          : ResourcePool-resgroup-12
+ResourcePool            : Resources
+PersistentId            : 50183523-a58a-5f64-d859-348dfbbdb3e5
+UsedSpaceGB             : 30.000001245178282260894775391
+ProvisionedSpaceGB      : 32.778848432935774326324462891
+DatastoreIdList         : {Datastore-datastore-123456}
+HARestartPriority       : ClusterRestartPriority
+HAIsolationResponse     : AsSpecifiedByCluster
+DrsAutomationLevel      : AsSpecifiedByCluster
+VMSwapfilePolicy        : Inherit
+VMResourceConfiguration : CpuShares:Normal/1000 MemShares:Normal/20480
+GuestId                 : centos64Guest
+Name                    : DEMO-CENTOS7-2-from-AWS
+CustomFields            : {[ClusterInvariantVMMId, ], [Rubrik_Backups, ], [Rubrik_SLA, ], [VRM Owner, ]...}
+ExtensionData           : VMware.Vim.VirtualMachine
+Id                      : VirtualMachine-vm-123456
+Uid                     : /VIServer=rubrik\demo.user@vcenter-01:443/VirtualMachine=VirtualMachine-vm-123456/
+Client                  : VMware.VimAutomation.ViCore.Impl.V1.VimClient
+
+4/27/2018 10:14:24 AM: Powering on VM DEMO-CENTOS7-2-from-AWS
+
+PowerState              : PoweredOn
+Version                 : v7
+Notes                   :
+Guest                   : DEMO-CENTOS7-2-from-AWS:
+NumCpu                  : 1
+CoresPerSocket          : 1
+MemoryMB                : 2048
+MemoryGB                : 2
+VMHostId                : HostSystem-host-12345
+VMHost                  : esx1
+VApp                    :
+FolderId                : Folder-group-v22
+Folder                  : vm
+ResourcePoolId          : ResourcePool-resgroup-27
+ResourcePool            : Resources
+PersistentId            : 50183523-a58a-5f64-d859-348dfbbdb3e5
+UsedSpaceGB             : 32.159180932678282260894775391
+ProvisionedSpaceGB      : 32.159181379713118076324462891
+DatastoreIdList         : {Datastore-datastore-123456}
+HARestartPriority       : ClusterRestartPriority
+HAIsolationResponse     : AsSpecifiedByCluster
+DrsAutomationLevel      : AsSpecifiedByCluster
+VMSwapfilePolicy        : Inherit
+VMResourceConfiguration : CpuShares:Normal/1000 MemShares:Normal/20480
+GuestId                 : centos64Guest
+Name                    : DEMO-CENTOS7-2-from-AWS
+CustomFields            : {[ClusterInvariantVMMId, ], [Rubrik_Backups, ], [Rubrik_SLA, ], [VRM Owner, ]...}
+ExtensionData           : VMware.Vim.VirtualMachine
+Id                      : VirtualMachine-vm-123456
+Uid                     : /VIServer=rubrik\demo.user@vcenter-01:443/VirtualMachine=VirtualMachine-vm-123456/
+Client                  : VMware.VimAutomation.ViCore.Impl.V1.VimClient
+
+4/27/2018 10:14:27 AM: Done
