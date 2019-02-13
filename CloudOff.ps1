@@ -107,7 +107,7 @@ $vmHost = getHost
 $rk_object_name = (Get-EC2Tag -Region $region | where {$_.ResourceId -eq "$instanceId" -and $_.Key -eq "rk_object_name"}).value
 $vmNewName = "$($rk_object_name)-from-AWS" 
 $ovaFile = "$($downloadDirectory)\$($rk_object_name).ova"
-
+$datacenter = Get-Datacenter -Cluster $vmCluster
 
 write-host "$(Get-Date -Format G): Migrating AWS instance $instanceId to $vCenter as $vmNewName"
 
