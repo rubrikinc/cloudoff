@@ -117,9 +117,3 @@ CloudOff is freely distributed under the [GPLv3 License](https://www.gnu.org/lic
 ## Support
 
 Please file bugs and issues on the Github issues page for this project. This is to help keep track and document everything related to this repo.
-
-### Created and Maintained by the Rubrik Ranger Team
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/8610203/37415009-6f9cf416-2778-11e8-8b56-052a8e41c3c8.png" alt="Rubrik Ranger Logo"/>
-</p>
